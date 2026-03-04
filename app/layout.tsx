@@ -20,6 +20,7 @@ export default function RootLayout({
       <body className="font-inter" style={{ fontFamily: "'Inter', sans-serif" }}>
         <Navbar />
         {children}
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </body>
     </html>
   );
