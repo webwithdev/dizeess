@@ -70,22 +70,43 @@ export default function ProductivityPage() {
       </div>
     </nav>
 
-    <main className="bg-gray-50 pt-20 min-h-screen">
-    <div className="grid lg:grid-cols-2">
+    <main className="bg-gradient-to-b from-white via-gray-50 to-white pt-20 min-h-screen relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#065f46]/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-40 left-10 w-80 h-80 bg-[#064e3b]/5 rounded-full blur-3xl animate-pulse delay-700"></div>
+      </div>
+
+    <div className="grid lg:grid-cols-2 relative z-10">
       {/* Left Side - Image (Sticky) */}
-      <div className="flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 min-h-[40vh] lg:min-h-screen lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)]">
-        <div className="w-full h-full flex items-center justify-center p-4 lg:p-8">
-        <img 
-          src="/images/ChatGPT Image Feb 23, 2026, 04_12_34 PM.png" 
-          alt="Product mockup"
-          className="w-full h-full object-contain rounded-2xl shadow-2xl"
-        />
+      <div className="flex items-center justify-center bg-gradient-to-br from-[#065f46]/5 via-gray-50 to-[#064e3b]/5 min-h-[40vh] lg:min-h-screen lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] relative">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute top-10 left-10 w-32 h-32 border-2 border-[#065f46] rounded-full"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-[#064e3b] rounded-full"></div>
+        </div>
+        
+        <div className="w-full h-full flex items-center justify-center p-4 lg:p-8 relative z-10">
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
+            <img 
+              src="/images/ChatGPT Image Feb 23, 2026, 04_12_34 PM.png" 
+              alt="Product mockup"
+              className="relative w-full h-full object-contain rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </div>
 
       {/* Right Side - Product Details (Scrollable with Custom Scrollbar) */}
       <div className="p-4 sm:p-6 lg:p-12 bg-gradient-to-b from-white via-gray-50 to-white overflow-y-auto custom-scrollbar">
         <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8 pb-12 sm:pb-16">
+        
+        {/* Trending Badge */}
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+          <span className="text-lg">🔥</span>
+          <span>Trending Product - 100+ Students</span>
+        </div>
         
         {/* Format Badges */}
         <div className="flex flex-wrap gap-2 animate-fadeIn">
@@ -95,27 +116,52 @@ export default function ProductivityPage() {
           <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-900 text-white text-xs font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105">
             💾 5.01 MB
           </span>
+          <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105">
+            ⚡ Instant Access
+          </span>
         </div>
 
         {/* Product Title */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           <h1 className="text-3xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
-            From ₹0 to ₹100000 - The Ultimate Guide to Your First Lakh
+            From <span className="bg-gradient-to-r from-[#065f46] to-[#064e3b] bg-clip-text text-transparent">₹0 to ₹100000</span>
           </h1>
+          <p className="text-xl lg:text-2xl font-bold text-gray-700">The Ultimate Guide to Your First Lakh</p>
+          
+          {/* Rating & Reviews */}
+          <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-yellow-500 text-xl">⭐</span>
+              ))}
+            </div>
+            <span className="text-gray-600 font-semibold">4.9/5.0</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-gray-600 font-semibold">100+ Students</span>
+          </div>
         </div>
 
         {/* Price Section */}
-        <div className="bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300">
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4">
-            <div>
-              <p className="text-sm font-medium opacity-90 mb-2">🔥 Limited Time Offer</p>
-              <div className="flex items-baseline gap-3 flex-wrap">
-                <span className="text-5xl lg:text-6xl font-black">₹99</span>
-                <span className="text-xl lg:text-2xl line-through opacity-60">₹299</span>
+        <div className="relative bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group">
+          {/* Animated shine effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          
+          <div className="relative z-10">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4">
+              <div>
+                <p className="text-sm font-medium opacity-90 mb-2 flex items-center gap-2">
+                  <span className="text-xl animate-bounce">🔥</span>
+                  Limited Time Offer - Ends Soon!
+                </p>
+                <div className="flex items-baseline gap-3 flex-wrap">
+                  <span className="text-5xl lg:text-6xl font-black">₹99</span>
+                  <span className="text-xl lg:text-2xl line-through opacity-60">₹299</span>
+                </div>
+                <p className="text-sm opacity-90 mt-2">Save ₹200 Today 💰</p>
               </div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-xl animate-pulse">
-              <p className="text-base font-bold">67% OFF</p>
+              <div className="bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-xl animate-pulse border-2 border-white/30">
+                <p className="text-base font-bold">67% OFF</p>
+              </div>
             </div>
           </div>
         </div>
@@ -279,10 +325,13 @@ export default function ProductivityPage() {
         </div>
 
         {/* What You'll Get */}
-        <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-xl">
-          <h3 className="text-xl font-bold text-gray-900 mb-5 flex items-center gap-2">
-            <span className="text-2xl">✨</span> What You'll Get
-          </h3>
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-xl">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-xl flex items-center justify-center text-2xl shadow-md">
+              ✨
+            </div>
+            <h3 className="text-2xl font-black text-gray-900">What You'll Get</h3>
+          </div>
           <ul className="space-y-3">
             <li className="flex items-start gap-3 group hover:bg-gray-50 p-2 rounded-lg transition-all duration-200">
               <span className="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white text-sm font-bold group-hover:scale-110 transition-transform shadow-md">✓</span>
@@ -303,11 +352,203 @@ export default function ProductivityPage() {
           </ul>
         </div>
 
+        {/* Customer Reviews Section */}
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-xl flex items-center justify-center text-2xl shadow-md">
+              ⭐
+            </div>
+            <div>
+              <h3 className="text-2xl font-black text-gray-900">Customer Reviews</h3>
+              <p className="text-sm text-gray-600">See what others are saying</p>
+            </div>
+          </div>
+
+          {/* Overall Rating */}
+          <div className="bg-white rounded-xl p-6 mb-6 border-2 border-[#065f46]/20">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-center sm:text-left">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-5xl font-black text-gray-900">4.9</span>
+                  <span className="text-gray-600 text-lg">/5.0</span>
+                </div>
+                <div className="flex items-center gap-1 mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-500 text-2xl">⭐</span>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600 font-semibold">Based on 100+ reviews</p>
+              </div>
+              <div className="w-full sm:w-auto flex-1 max-w-md space-y-2">
+                {[5, 4, 3, 2, 1].map((rating) => (
+                  <div key={rating} className="flex items-center gap-2">
+                    <span className="text-sm font-semibold text-gray-700 w-8">{rating}★</span>
+                    <div className="flex-1 bg-gray-200 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-[#065f46] to-[#064e3b] h-2 rounded-full transition-all duration-500"
+                        style={{ width: rating === 5 ? '85%' : rating === 4 ? '12%' : '3%' }}
+                      ></div>
+                    </div>
+                    <span className="text-sm text-gray-600 w-12 text-right">
+                      {rating === 5 ? '85%' : rating === 4 ? '12%' : '3%'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Individual Reviews */}
+          <div className="space-y-4">
+            {/* Review 1 */}
+            <div className="bg-white rounded-xl p-5 lg:p-6 border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  R
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="font-bold text-gray-900">Rahul Kumar</h4>
+                    <span className="text-xs text-gray-500">2 days ago</span>
+                  </div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    This guide is exactly what I needed! The 60-day action plan is so clear and practical. I'm already on day 15 and made my first ₹2,500. Highly recommend this to anyone starting out!
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                    <span>✓</span> Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-white rounded-xl p-5 lg:p-6 border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  P
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="font-bold text-gray-900">Priya Sharma</h4>
+                    <span className="text-xs text-gray-500">5 days ago</span>
+                  </div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Best ₹99 I've ever spent! No fluff, no theory - just actionable steps. I was skeptical at first but the strategies actually work. Made my first sale within 3 weeks. Worth every rupee! 💯
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                    <span>✓</span> Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-white rounded-xl p-5 lg:p-6 border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  A
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="font-bold text-gray-900">Amit Patel</h4>
+                    <span className="text-xs text-gray-500">1 week ago</span>
+                  </div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Finally, a guide that's honest and realistic! The method comparison section saved me months of trial and error. Started with zero investment as promised and now building my first income stream. 🚀
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                    <span>✓</span> Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 4 */}
+            <div className="bg-white rounded-xl p-5 lg:p-6 border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  S
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="font-bold text-gray-900">Sneha Singh</h4>
+                    <span className="text-xs text-gray-500">1 week ago</span>
+                  </div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Perfect for beginners! Everything is explained in simple language. The step-by-step approach makes it easy to follow. Already seeing results in week 4. Thank you for creating this! ❤️
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                    <span>✓</span> Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Review 5 */}
+            <div className="bg-white rounded-xl p-5 lg:p-6 border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-md">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  V
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <h4 className="font-bold text-gray-900">Vikram Mehta</h4>
+                    <span className="text-xs text-gray-500">2 weeks ago</span>
+                  </div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-lg">⭐</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Phenomenal value for money! The blueprint is detailed yet easy to implement. I've tried many courses before but this one actually delivers. Real strategies from real experience. 10/10 would recommend! 👏
+                  </p>
+                  <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                    <span>✓</span> Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Message */}
+          <div className="mt-6 bg-gradient-to-r from-[#065f46]/10 to-[#064e3b]/10 rounded-xl p-6 border-2 border-[#065f46]/20">
+            <p className="text-center text-gray-700 font-semibold">
+              Join <span className="text-[#065f46] font-black">100+</span> satisfied students who are already building their income streams! 🎯
+            </p>
+          </div>
+        </div>
+
         {/* Detailed Description */}
-        <div className="space-y-6 pt-8 border-t-2 border-gray-200 mt-8">
-          <div>
-            <h2 className="text-2xl font-bold text-[#064E3B] mb-2">From ₹0 to ₹100000 - The Ultimate Guide to Your First Lakh 💸</h2>
-            <p className="text-xl font-semibold text-gray-900">The Exact System I Used to Earn My First Lakh</p>
+        <div className="space-y-8 pt-8 border-t-2 border-gray-200 mt-8">
+          <div className="bg-gradient-to-br from-[#065f46]/10 to-[#064e3b]/10 rounded-2xl p-6 lg:p-8 border-2 border-[#065f46]/20">
+            <h2 className="text-2xl lg:text-3xl font-black bg-gradient-to-r from-[#065f46] to-[#064e3b] bg-clip-text text-transparent mb-3">From ₹0 to ₹100000 💸</h2>
+            <p className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">The Exact System I Used to Earn My First Lakh</p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <span className="px-4 py-2 bg-white rounded-full text-sm font-bold text-gray-700 shadow-sm">🎯 Proven System</span>
+              <span className="px-4 py-2 bg-white rounded-full text-sm font-bold text-gray-700 shadow-sm">📈 Real Results</span>
+              <span className="px-4 py-2 bg-white rounded-full text-sm font-bold text-gray-700 shadow-sm">💯 No BS</span>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -320,61 +561,128 @@ export default function ProductivityPage() {
             This is the structured system that took me from ₹0 to ₹100000.
           </p>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#064E3B]">💰 How I Made My First ₹100000</h3>
+          <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-lg flex items-center justify-center text-xl shadow-md">
+                💰
+              </div>
+              <h3 className="text-xl lg:text-2xl font-black text-gray-900">How I Made My First ₹100000</h3>
+            </div>
             
-            <div className="space-y-3">
-            <div>
-              <p className="font-semibold text-gray-900">🔵 Starting from Zero</p>
+            <div className="space-y-4">
+            <div className="bg-gradient-to-r from-gray-50 to-white p-4 rounded-xl border-l-4 border-[#065f46] hover:shadow-md transition-all duration-200">
+              <p className="font-bold text-gray-900 text-lg mb-1 flex items-center gap-2">
+                <span className="text-[#065f46]">▶</span> Starting from Zero
+              </p>
               <p className="text-gray-700">How I began with no capital, no audience, and no shortcuts.</p>
             </div>
 
-            <div>
-              <p className="font-semibold text-gray-900">🔵 The Method That Worked</p>
+            <div className="bg-gradient-to-r from-gray-50 to-white p-4 rounded-xl border-l-4 border-[#065f46] hover:shadow-md transition-all duration-200">
+              <p className="font-bold text-gray-900 text-lg mb-1 flex items-center gap-2">
+                <span className="text-[#065f46]">▶</span> The Method That Worked
+              </p>
               <p className="text-gray-700">The exact income model that generated real results — and why it worked.</p>
             </div>
 
-            <div>
-              <p className="font-semibold text-gray-900">🔵 Mistakes I Made</p>
+            <div className="bg-gradient-to-r from-gray-50 to-white p-4 rounded-xl border-l-4 border-[#065f46] hover:shadow-md transition-all duration-200">
+              <p className="font-bold text-gray-900 text-lg mb-1 flex items-center gap-2">
+                <span className="text-[#065f46]">▶</span> Mistakes I Made
+              </p>
               <p className="text-gray-700">Time-wasting actions, wrong decisions, and what I would never repeat.</p>
             </div>
 
-            <div>
-              <p className="font-semibold text-gray-900">🔵 Scaling Strategy</p>
+            <div className="bg-gradient-to-r from-gray-50 to-white p-4 rounded-xl border-l-4 border-[#065f46] hover:shadow-md transition-all duration-200">
+              <p className="font-bold text-gray-900 text-lg mb-1 flex items-center gap-2">
+                <span className="text-[#065f46]">▶</span> Scaling Strategy
+              </p>
               <p className="text-gray-700">How I turned small earnings into consistent income.</p>
             </div>
             </div>
 
-            <p className="text-gray-900 font-semibold">
-            This isn't a highlight reel.<br />
-            It's the full breakdown.
-            </p>
+            <div className="bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white p-5 rounded-xl mt-6">
+              <p className="font-bold text-lg text-center">
+                This isn't a highlight reel.<br />
+                It's the full breakdown.
+              </p>
+            </div>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#064E3B]">⚖ Methods Compared (So You Don't Waste Time)</h3>
-            <p className="text-gray-700">Not every method fits everyone. Inside, I compare earning models clearly:</p>
+          <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-lg flex items-center justify-center text-xl shadow-md">
+                ⚖
+              </div>
+              <h3 className="text-xl lg:text-2xl font-black text-gray-900">Methods Compared</h3>
+            </div>
+            <p className="text-gray-700 font-semibold mb-4">Not every method fits everyone. Inside, I compare earning models clearly:</p>
             
-            <ul className="space-y-2 text-gray-700">
-            <li>🔵 Difficulty level (Beginner / Intermediate / Advanced)</li>
-            <li>🔵 Time required to see first results</li>
-            <li>🔵 Investment needed (₹0 / Low / Medium)</li>
-            <li>🔵 Platforms to use</li>
-            <li>🔵 Best option if you're just starting</li>
-            </ul>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                <span className="text-[#065f46] font-bold text-lg">✓</span>
+                <span className="text-gray-700 font-medium">Difficulty level (Beginner / Intermediate / Advanced)</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                <span className="text-[#065f46] font-bold text-lg">✓</span>
+                <span className="text-gray-700 font-medium">Time required to see first results</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                <span className="text-[#065f46] font-bold text-lg">✓</span>
+                <span className="text-gray-700 font-medium">Investment needed (₹0 / Low / Medium)</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                <span className="text-[#065f46] font-bold text-lg">✓</span>
+                <span className="text-gray-700 font-medium">Platforms to use</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg">
+                <span className="text-[#065f46] font-bold text-lg">✓</span>
+                <span className="text-gray-700 font-medium">Best option if you're just starting</span>
+              </div>
+            </div>
 
-            <p className="text-gray-900 font-semibold">No confusion. No guessing.</p>
+            <div className="bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white p-5 rounded-xl mt-6">
+              <p className="font-bold text-lg text-center">No confusion. No guessing.</p>
+            </div>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-[#064E3B]">🚀 Clear Action Plan</h3>
+          <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#065f46] to-[#064e3b] rounded-lg flex items-center justify-center text-xl shadow-md">
+                🚀
+              </div>
+              <h3 className="text-xl lg:text-2xl font-black text-gray-900">Clear Action Plan</h3>
+            </div>
             
-            <ul className="space-y-2 text-gray-700">
-            <li>🔵 Step-by-step execution framework</li>
-            <li>🔵 How to land your first client or sale</li>
-            <li>🔵 How to move from ₹0 to consistent income</li>
-            <li>🔵 How to reinvest and grow</li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-[#065f46]/10 to-[#064e3b]/10 p-4 rounded-xl border-2 border-[#065f46]/20 hover:border-[#065f46] transition-all duration-200">
+                <p className="font-bold text-gray-900 mb-1">Step 1</p>
+                <p className="text-sm text-gray-700">Execution framework</p>
+              </div>
+              <div className="bg-gradient-to-br from-[#065f46]/10 to-[#064e3b]/10 p-4 rounded-xl border-2 border-[#065f46]/20 hover:border-[#065f46] transition-all duration-200">
+                <p className="font-bold text-gray-900 mb-1">Step 2</p>
+                <p className="text-sm text-gray-700">First client or sale</p>
+              </div>
+              <div className="bg-gradient-to-br from-[#065f46]/10 to-[#064e3b]/10 p-4 rounded-xl border-2 border-[#065f46]/20 hover:border-[#065f46] transition-all duration-200">
+                <p className="font-bold text-gray-900 mb-1">Step 3</p>
+                <p className="text-sm text-gray-700">Consistent income</p>
+              </div>
+              <div className="bg-gradient-to-br from-[#065f46]/10 to-[#064e3b]/10 p-4 rounded-xl border-2 border-[#065f46]/20 hover:border-[#065f46] transition-all duration-200">
+                <p className="font-bold text-gray-900 mb-1">Step 4</p>
+                <p className="text-sm text-gray-700">Reinvest and grow</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Final CTA Section */}
+          <div className="bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-2xl p-8 lg:p-10 text-white text-center shadow-2xl mt-8">
+            <h3 className="text-2xl text-white lg:text-3xl font-black mb-4">Ready to Make Your First Lakh?</h3>
+            <p className="text-lg mb-6 opacity-90">Join 100+ students who are already implementing these strategies</p>
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="bg-white text-[#065f46] font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-2"
+            >
+              <span>Get Started Now</span>
+              <span className="text-2xl">↑</span>
+            </button>
           </div>
         </div>
         </div>
