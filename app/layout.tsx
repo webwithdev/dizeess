@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-inter" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <body className="font-inter" style={{ fontFamily: "'Inter', sans-serif" }} suppressHydrationWarning>
         <Navbar />
         {children}
         <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

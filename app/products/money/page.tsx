@@ -1,16 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function ProductivityPage() {
-  const [copied, setCopied] = useState(false);
-  const [showPayment, setShowPayment] = useState(false);
-
-  const copyUpiId = () => {
-    navigator.clipboard.writeText('anitabishtjune25@okaxis');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  const paymentLink = 'https://urpy.link/5fGeVN';
 
   return (
     <>
@@ -185,144 +176,15 @@ export default function ProductivityPage() {
         </div>
 
         {/* Main CTA */}
-        <button 
-          onClick={() => setShowPayment(!showPayment)}
-          className="w-full bg-gradient-to-r from-[#065f46] to-[#064e3b] hover:from-[#064e3b] hover:to-[#065f46] text-white font-bold text-lg sm:text-xl py-5 sm:py-6 px-6 sm:px-8 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transform relative overflow-hidden group"
+        <a
+          href={paymentLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#065f46] to-[#064e3b] hover:from-[#064e3b] hover:to-[#065f46] text-white font-bold text-lg sm:text-xl py-5 sm:py-6 px-6 sm:px-8 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transform relative overflow-hidden group"
         >
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
           <span className="relative">🚀 BUY NOW - ₹99</span>
-        </button>
-
-        {/* Payment Dropdown - Hidden by default */}
-        <div 
-          className={`overflow-hidden transition-all duration-500 ease-in-out transform origin-top ${
-            showPayment ? 'max-h-[2000px] opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95'
-          }`}
-        >
-          {/* Google Pay / UPI Payment */}
-          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl border-2 border-[#065f46] animate-slideDown">
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold flex-shrink-0">
-                G
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Pay via Google Pay</h3>
-                <p className="text-xs sm:text-sm text-gray-500">PhonePe, GPay, Paytm & all UPI apps</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col items-center space-y-6">
-              {/* QR Code */}
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-4 sm:p-6 rounded-2xl border-2 border-dashed border-[#065f46]">
-                <img 
-                  src="/images/image.png" 
-                  alt="Google Pay QR Code"
-                  className="w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52 object-contain"
-                />
-              </div>
-              
-              {/* UPI ID Section */}
-              <div className="w-full space-y-3">
-                <p className="text-sm sm:text-base font-bold text-gray-700 text-center">Or copy UPI ID</p>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 bg-gray-50 px-3 sm:px-5 py-3 sm:py-4 rounded-xl border-2 border-gray-200">
-                  <code className="text-xs sm:text-sm lg:text-base font-mono text-gray-900 flex-1 font-bold break-all">anitabishtjune25@okaxis</code>
-                  <button
-                    onClick={copyUpiId}
-                    className="bg-[#065f46] hover:bg-[#064e3b] text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg flex-shrink-0 w-full sm:w-auto"
-                  >
-                    {copied ? (
-                      <>
-                        <span>✓</span>
-                        <span>Copied</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>📋</span>
-                        <span>Copy</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-                <div className="bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl text-center shadow-lg">
-                  <p className="text-base sm:text-lg font-bold">Amount to Pay: ₹99</p>
-                </div>
-              </div>
-
-              {/* Payment Instructions */}
-              <div className="w-full bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-4 sm:p-6 border-2 border-amber-300 mt-4">
-                <div className="flex items-start gap-2 sm:gap-3 lg:gap-4">
-                  <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-amber-500 rounded-full flex items-center justify-center text-white text-lg sm:text-xl">
-                    📧
-                  </div>
-                  <div className="space-y-2 min-w-0 flex-1">
-                    <h4 className="font-bold text-gray-900 text-base sm:text-lg">After Successful Payment</h4>
-                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                      Send screenshot of payment confirmation <span className="font-bold">along with your email address</span> to:
-                    </p>
-                    <a 
-                      href="mailto:bishtdevansh03@gmail.com" 
-                      className="inline-block text-[#065f46] hover:text-[#064e3b] font-bold text-sm sm:text-base underline decoration-2 underline-offset-2 break-all"
-                    >
-                      bishtdevansh03@gmail.com
-                    </a>
-                    <p className="text-xs sm:text-sm text-gray-700 font-semibold mt-2">
-                      ⚡ You'll receive your product within <span className="text-[#065f46] font-bold">25 minutes</span>!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* PayPal Payment Option */}
-          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl border-2 border-[#0070ba] animate-slideDown mt-4">
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0070ba] rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold shadow-md flex-shrink-0">
-                P
-              </div>
-              <div className="min-w-0">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Pay via PayPal</h3>
-                <p className="text-xs sm:text-sm text-gray-500">Credit/Debit cards & international payments</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col items-center space-y-6">
-              <a 
-                href="https://paypal.me/devanshbishtcr7/1.2" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-[#0070ba] hover:bg-[#005ea6] text-white font-bold text-base sm:text-lg py-4 sm:py-5 px-4 sm:px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <span className="text-xl sm:text-2xl">💳</span>
-                <span>Pay ₹99 with PayPal</span>
-              </a>
-
-              {/* Payment Instructions for PayPal */}
-              <div className="w-full bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6 border-2 border-blue-200">
-                <div className="flex items-start gap-2 sm:gap-3 lg:gap-4">
-                  <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg sm:text-xl">
-                    ℹ️
-                  </div>
-                  <div className="space-y-2 min-w-0 flex-1">
-                    <h4 className="font-bold text-gray-900 text-base sm:text-lg">After PayPal Payment</h4>
-                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                      Once your payment is confirmed by PayPal, send your <span className="font-bold">PayPal transaction ID and email address</span> to:
-                    </p>
-                    <a 
-                      href="mailto:bishtdevansh03@gmail.com" 
-                      className="inline-block text-[#0070ba] hover:text-[#005ea6] font-bold text-sm sm:text-base underline decoration-2 underline-offset-2 break-all"
-                    >
-                      bishtdevansh03@gmail.com
-                    </a>
-                    <p className="text-xs sm:text-sm text-gray-700 font-semibold mt-2">
-                      ⚡ You'll receive your product within <span className="text-[#0070ba] font-bold">25 minutes</span>!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </a>
 
         {/* What You'll Get */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 hover:border-[#065f46] transition-all duration-300 hover:shadow-xl">

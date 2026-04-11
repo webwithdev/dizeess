@@ -36,7 +36,7 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 animate-fadeIn">
               <Link 
-                href="/products/money"
+                href="/products"
                 className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>

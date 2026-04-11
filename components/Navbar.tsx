@@ -20,17 +20,17 @@ export default function Navbar() {
           {/* Navigation Links */}
           <div className="flex items-center gap-8">
             <Link 
-              href="/products/money" 
+              href="/products" 
               className="relative text-gray-700 hover:text-[#065f46] transition-all duration-300 font-semibold text-base group"
             >
               <span>Products</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#065f46] to-[#064e3b] group-hover:w-full transition-all duration-300"></span>
             </Link>
             <Link 
-              href="/dashboard" 
+              href="/aboutus" 
               className="relative text-gray-700 hover:text-[#065f46] transition-all duration-300 font-semibold text-base group"
             >
-              <span>Dashboard</span>
+              <span>About Us</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#065f46] to-[#064e3b] group-hover:w-full transition-all duration-300"></span>
             </Link>
           </div>
