@@ -13,6 +13,12 @@ const products = [
     href: '/products/productivity',
     cta: 'Open Productivity Product',
   },
+  {
+    title: '7-Day Ultimate Reset',
+    description: 'A 7-day reset to clear your mind, space, and habits with daily action plans.',
+    href: '/products/7-day-ultimate-reset',
+    cta: 'Open Ultimate Reset',
+  },
 ];
 
 export default function ProductsPage() {

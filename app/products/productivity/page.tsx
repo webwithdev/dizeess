@@ -1,7 +1,7 @@
 'use client';
 
 export default function ProductivityPage() {
-  const paymentLink = 'https://urpy.link/5fGeVN';
+  const paymentLink = 'https://urpy.link/G8ULxQ';
 
   return (
     <>
@@ -145,8 +145,8 @@ export default function ProductivityPage() {
                   Limited Time Offer - Ends Soon!
                 </p>
                 <div className="flex items-baseline gap-3 flex-wrap">
-                  <span className="text-5xl lg:text-6xl font-black">₹99</span>
-                  <span className="text-xl lg:text-2xl line-through opacity-60">₹399</span>
+                  <span className="text-5xl lg:text-6xl font-black">₹199</span>
+                  <span className="text-xl lg:text-2xl line-through opacity-60">₹499</span>
                 </div>
                 <p className="text-sm opacity-90 mt-2">Save ₹300 Today 💰</p>
               </div>
@@ -184,7 +184,7 @@ export default function ProductivityPage() {
           className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#065f46] to-[#064e3b] hover:from-[#064e3b] hover:to-[#065f46] text-white font-bold text-lg sm:text-xl py-5 sm:py-6 px-6 sm:px-8 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transform relative overflow-hidden group"
         >
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-          <span className="relative">🚀 BUY NOW - ₹99</span>
+          <span className="relative">🚀 BUY NOW - ₹199</span>
         </a>
 
         {/* What You'll Get */}
