@@ -1,5 +1,5 @@
 export default function Access2Page() {
-  const downloadUrl = '/downloads/Ultimate%207-Day%20Reset.pdf';
+  const downloadUrl = '/downloads/The%20Ultimate%207-Day%20Reset.pdf';
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white pt-24 pb-16">
