@@ -1,8 +1,7 @@
 'use client';
 
 export default function UltimateResetPage() {
-  const freeAccessLink = '/access2';
-  const payWhatYouWantLink = 'https://urpy.link/YABwIN';
+  const paymentLink = 'https://urpy.link/586ZcU';
   const productImage = '/images/7%20day%20plan.png';
 
   return (
@@ -91,19 +90,20 @@ export default function UltimateResetPage() {
 
           <div className="p-4 sm:p-6 lg:p-12 bg-gradient-to-b from-white via-gray-50 to-white overflow-y-auto custom-scrollbar">
             <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8 pb-12 sm:pb-16">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                <span>Free Product</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                <span className="text-lg">🔥</span>
+                <span>Best Seller - 1000+ Customers</span>
               </div>
 
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white text-xs font-bold rounded-full shadow-md">
-                  PDF Format
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-[#065f46] to-[#064e3b] text-white text-xs font-bold rounded-full flex items-center gap-1.5 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105">
+                  📄 PDF Format
                 </span>
-                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-900 text-white text-xs font-bold rounded-full shadow-md">
-                  7-Day Plan
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-900 text-white text-xs font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105">
+                  ⚡ 7-Day Plan
                 </span>
-                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white text-xs font-bold rounded-full shadow-md">
-                  Instant Access
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105">
+                  ✨ Instant Access
                 </span>
               </div>
 
@@ -113,39 +113,71 @@ export default function UltimateResetPage() {
                 </h1>
                 <p className="text-xl lg:text-2xl font-bold text-gray-700">
                   Reset your focus, energy, and space in seven simple days.
-                  A clear daily routine that turns overwhelm into momentum.
                 </p>
+
+                <div className="flex items-center gap-4 flex-wrap">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-500 text-xl">⭐</span>
+                    ))}
+                  </div>
+                  <span className="text-gray-600 font-semibold">4.8/5.0</span>
+                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-600 font-semibold">1000+ Happy Users</span>
+                </div>
               </div>
 
               <div className="relative bg-gradient-to-r from-[#065f46] to-[#064e3b] rounded-2xl p-6 lg:p-8 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                <div className="relative z-10 space-y-5">
-                  <div>
-                    <p className="text-sm font-medium opacity-90 mb-2">Choose your access ✨</p>
-                    <p className="text-2xl lg:text-3xl font-black">Free or pay what you want 💚</p>
-                    <p className="text-sm opacity-90 mt-2">Grab the reset and start today.</p>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <a
-                      href={freeAccessLink}
-                      className="w-full inline-flex items-center justify-center bg-white/95 text-[#064e3b] font-bold text-lg py-4 px-6 rounded-2xl border border-white/40 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
-                    >
-                      Get It for Free 
-                    </a>
-                    <a
-                      href={payWhatYouWantLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center bg-[#18a06d] text-white font-bold text-lg py-4 px-6 rounded-2xl border border-white/20 transition-all duration-300 shadow-[0_12px_25px_-12px_rgba(6,78,59,0.5)] hover:shadow-[0_18px_35px_-12px_rgba(6,78,59,0.7)] hover:bg-[#1ab476] hover:scale-[1.02] active:scale-[0.98]"
-                    >
-                      Pay Whatever You Want 💰
-                    </a>
+                <div className="relative z-10">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-medium opacity-90 mb-2 flex items-center gap-2">
+                        <span className="text-xl animate-bounce">🔥</span>
+                        Limited Time Deal - Grab It Now!
+                      </p>
+                      <div className="flex items-baseline gap-3 flex-wrap">
+                        <span className="text-5xl lg:text-6xl font-black">₹49</span>
+                        <span className="text-xl lg:text-2xl line-through opacity-60">₹399</span>
+                      </div>
+                      <p className="text-sm opacity-90 mt-2">Save ₹350 Today 💚</p>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm px-5 py-2.5 rounded-xl animate-pulse border-2 border-white/30">
+                      <p className="text-base font-bold">87% OFF</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              
+
+              <a
+                href={paymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center bg-gradient-to-r from-[#065f46] to-[#064e3b] hover:from-[#064e3b] hover:to-[#065f46] text-white font-bold text-lg sm:text-xl py-5 sm:py-6 px-6 sm:px-8 rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] transform relative overflow-hidden group"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                <span className="relative">🚀 BUY NOW - ₹49</span>
+              </a>
+              <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 py-4">
+                <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                  <span className="text-xl">⚡</span>
+                  <span className="font-semibold whitespace-nowrap">Instant Access</span>
+                </div>
+                <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
+                <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                  <span className="text-xl">🔒</span>
+                  <span className="font-semibold whitespace-nowrap">Secure Payment</span>
+                </div>
+                <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
+                <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors duration-200">
+                  <span className="text-xl">📱</span>
+                  <span className="font-semibold whitespace-nowrap">100% Digital</span>
+                </div>
+              </div>
+              
               <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100">
                 <h3 className="text-2xl font-black text-gray-900 mb-4">After 7 Days, You Will Feel</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
