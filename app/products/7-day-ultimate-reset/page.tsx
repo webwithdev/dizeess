@@ -109,7 +109,7 @@ export default function UltimateResetPage() {
 
               <div className="space-y-4">
                 <h1 className="text-3xl lg:text-5xl font-black text-gray-900 leading-tight tracking-tight">
-                  7-Day <span className="bg-gradient-to-r from-[#065f46] to-[#064e3b] bg-clip-text text-transparent">Ultimate Reset</span>
+                  7-Day <span className="bg-gradient-to-r from-[#065f46] to-[#064e3b] bg-clip-text text-transparent">Ultimate Reset Routine</span>
                 </h1>
                 <p className="text-xl lg:text-2xl font-bold text-gray-700">
                   Reset your focus, energy, and space in seven simple days.
@@ -219,7 +219,7 @@ export default function UltimateResetPage() {
                   Fast forward to today. I run my own startup, a personal brand, I stay consistent, actually sleep, and wake up excited to build again.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  What changed? I stopped trying to overhaul my entire life in one go. Instead, I built a simple 7-day system that resets your inner chaos step by step. That is exactly what this guide will do for you.
+                  What changed? I stopped trying to overhaul my entire life in one go. Instead, I built a simple 7-day routine that resets your inner chaos step by step. That is exactly what this guide will do for you.
                 </p>
               </div>
 
