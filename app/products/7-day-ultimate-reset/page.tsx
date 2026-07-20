@@ -110,16 +110,9 @@ export default function UltimateResetPage() {
 
           <section className="bg-gradient-to-b from-white via-gray-50 to-white px-4 pb-28 pt-5 sm:px-6 sm:pb-16 sm:pt-8 lg:px-10 xl:px-14">
             <div className="mx-auto w-full max-w-2xl space-y-6 sm:space-y-8">
-              <div className="rounded-2xl border border-[#065f46]/15 bg-white p-4 shadow-sm md:hidden">
-                <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#065f46]">From Devansh</p>
-                <p className="text-sm leading-relaxed text-gray-700">
-                  I built this after I kept restarting my life every week and getting nowhere. If you follow me on Instagram, you already know I keep things real — this is the exact reset I wish I had then.
-                </p>
-              </div>
-
               <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-3.5 py-2 text-xs font-bold text-white shadow-lg sm:px-4 sm:text-sm">
                 <span className="text-base sm:text-lg">🔥</span>
-                <span>Best Seller - 47 Customers</span>
+                <span>Best Seller - 50+ Customers</span>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -162,7 +155,7 @@ export default function UltimateResetPage() {
                   <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                     I am Devansh, a student and a coder from Srinagar. I built this after my own productivity kept
                     falling apart every week. I made this specifically for students like me who keep restarting and
-                    never sticking. 47 students have already bought this.
+                    never sticking. 50 students have already downloaded this.
                   </p>
                   <p className="mt-3 text-right text-sm font-bold text-[#064e3b]">- Devansh Bisht</p>
                 </div>
@@ -183,7 +176,6 @@ export default function UltimateResetPage() {
                         <span className="text-xl line-through opacity-60 lg:text-2xl">₹399</span>
                       </div>
                       <p className="mt-2 text-sm opacity-90">Save ₹350 Today 💚</p>
-                      <p className="mt-2 text-sm font-semibold text-white/95">Not happy? DM me for a refund.</p>
                     </div>
                     <div className="w-fit rounded-xl border border-white/35 bg-white/20 px-4 py-2.5 backdrop-blur-sm">
                       <p className="text-sm font-bold sm:text-base">87% OFF</p>
@@ -207,8 +199,8 @@ export default function UltimateResetPage() {
                   <span className="whitespace-nowrap font-semibold">Instant Access</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-2 text-xs text-gray-700 sm:px-4 sm:text-sm">
-                  <span className="text-base sm:text-lg">💬</span>
-                  <span className="whitespace-nowrap font-semibold">Refund if not helpful</span>
+                  <span className="text-base sm:text-lg">🔒</span>
+                  <span className="whitespace-nowrap font-semibold">Secure Payment</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-2 text-xs text-gray-700 sm:px-4 sm:text-sm">
                   <span className="text-base sm:text-lg">📱</span>
@@ -312,7 +304,6 @@ export default function UltimateResetPage() {
             >
               🚀 BUY NOW - ₹49
             </a>
-            <p className="mt-2 text-center text-[11px] font-semibold text-white/90">Not happy? DM me for a refund.</p>
           </div>
         </div>
       </main>
