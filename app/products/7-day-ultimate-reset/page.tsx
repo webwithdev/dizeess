@@ -1,7 +1,8 @@
 'use client';
 
 export default function UltimateResetPage() {
-  const paymentLink = 'https://urpy.link/586ZcU';
+  const downloadLink = '/access2';
+  const payWhateverLink = 'https://urpy.link/TuxKrp';
   const productImage = '/images/7%20day%20plan.png';
   const focusAreas = [
     'Environment',
@@ -112,7 +113,7 @@ export default function UltimateResetPage() {
             <div className="mx-auto w-full max-w-2xl space-y-6 sm:space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-3.5 py-2 text-xs font-bold text-white shadow-lg sm:px-4 sm:text-sm">
                 <span className="text-base sm:text-lg">🔥</span>
-                <span>Best Seller - 50+ Customers</span>
+                <span>Best Seller - 47 Customers</span>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -155,7 +156,7 @@ export default function UltimateResetPage() {
                   <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
                     I am Devansh, a student and a coder from Srinagar. I built this after my own productivity kept
                     falling apart every week. I made this specifically for students like me who keep restarting and
-                    never sticking. 50 students have already downloaded this.
+                    never sticking. 47 students have already bought this.
                   </p>
                   <p className="mt-3 text-right text-sm font-bold text-[#064e3b]">- Devansh Bisht</p>
                 </div>
@@ -168,28 +169,34 @@ export default function UltimateResetPage() {
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-baseline sm:justify-between">
                     <div>
                       <p className="mb-2 flex items-center gap-2 text-sm font-medium opacity-90">
-                        <span className="text-xl">🔥</span>
-                        Limited Time Deal - Grab It Now!
+                        <span className="text-xl">🎉</span>
+                        Completely Free - No Hidden Costs!
                       </p>
                       <div className="flex flex-wrap items-baseline gap-3">
-                        <span className="text-5xl font-black lg:text-6xl">₹49</span>
-                        <span className="text-xl line-through opacity-60 lg:text-2xl">₹399</span>
+                        <span className="text-5xl font-black lg:text-6xl">FREE</span>
+                     
                       </div>
-                      <p className="mt-2 text-sm opacity-90">Save ₹350 Today 💚</p>
+                      <p className="mt-2 text-sm opacity-90">Access the PDF instantly 💚</p>
                     </div>
-                    <div className="w-fit rounded-xl border border-white/35 bg-white/20 px-4 py-2.5 backdrop-blur-sm">
-                      <p className="text-sm font-bold sm:text-base">87% OFF</p>
-                    </div>
+                    
                   </div>
 
-                  <a
-                    href={paymentLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-white px-6 py-3.5 text-base font-black text-[#064e3b] shadow-lg transition-all duration-300 hover:bg-gray-100 sm:mt-6 sm:text-lg"
-                  >
-                    🚀 BUY NOW - ₹49
-                  </a>
+                  <div className="mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row sm:gap-3">
+                    <a
+                      href={downloadLink}
+                      className="inline-flex flex-1 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-base font-black text-[#064e3b] shadow-lg transition-all duration-300 hover:bg-gray-100 sm:text-lg"
+                    >
+                      📥 Download PDF
+                    </a>
+                    <a
+                      href={payWhateverLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex flex-1 items-center justify-center rounded-xl border-2 border-white bg-transparent px-6 py-3.5 text-base font-black text-white shadow-lg transition-all duration-300 hover:bg-white/10 sm:text-lg"
+                    >
+                      💰 Pay What You Want
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -199,8 +206,8 @@ export default function UltimateResetPage() {
                   <span className="whitespace-nowrap font-semibold">Instant Access</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-2 text-xs text-gray-700 sm:px-4 sm:text-sm">
-                  <span className="text-base sm:text-lg">🔒</span>
-                  <span className="whitespace-nowrap font-semibold">Secure Payment</span>
+                  <span className="text-base sm:text-lg">�</span>
+                  <span className="whitespace-nowrap font-semibold">Refund if not helpful</span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-2 text-xs text-gray-700 sm:px-4 sm:text-sm">
                   <span className="text-base sm:text-lg">📱</span>
@@ -282,28 +289,30 @@ export default function UltimateResetPage() {
           </section>
         </div>
 
-        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#065f46]/20 bg-white/95 p-3 backdrop-blur-md sm:hidden">
-          <div className="mx-auto max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-[#065f46] to-[#064e3b] p-3 text-white shadow-xl">
-            <div className="mb-2 flex items-center justify-between">
+        <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#065f46]/20 bg-white/95 p-2 backdrop-blur-md sm:hidden">
+          <div className="mx-auto max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-[#065f46] to-[#064e3b] p-2 text-white shadow-xl">
+            <div className="mb-1 flex items-center justify-between">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wide text-white/80">Today only</p>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-2xl font-black">₹49</p>
-                  <p className="text-sm line-through text-white/70">₹399</p>
-                </div>
-              </div>
-              <div className="rounded-lg border border-white/35 bg-white/20 px-2.5 py-1 text-xs font-bold backdrop-blur-sm">
-                87% OFF
+                <p className="text-[10px] font-semibold uppercase tracking-wide text-white/80">Get it free</p>
+                <p className="text-lg font-black">FREE</p>
               </div>
             </div>
-            <a
-              href={paymentLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2.5 text-sm font-black text-[#064e3b] shadow-lg"
-            >
-              🚀 BUY NOW - ₹49
-            </a>
+            <div className="flex flex-col gap-1.5">
+              <a
+                href={downloadLink}
+                className="inline-flex items-center justify-center rounded-xl bg-white px-3 py-2 text-xs font-black text-[#064e3b] shadow-lg transition-all duration-300 hover:bg-gray-100"
+              >
+                📥 Download PDF
+              </a>
+              <a
+                href={payWhateverLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-white bg-transparent px-3 py-2 text-xs font-black text-white shadow-lg transition-all duration-300 hover:bg-white/10"
+              >
+                💰 Pay What You Want
+              </a>
+            </div>
           </div>
         </div>
       </main>
